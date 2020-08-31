@@ -21,6 +21,12 @@ then
     exit 0
 fi 
 
+rm -rf $BASE_DIR/cards > /dev/null 2>&1
+mkdir $BASE_DIR/cards
+
+rm -rf $BASE_DIR/training > /dev/null 2>&1
+mkdir $BASE_DIR/training
+
 #Install Tensorflow
 pip3 install tensorflow
 
