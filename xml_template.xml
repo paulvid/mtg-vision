@@ -1,0 +1,26 @@
+<annotation>
+	<folder>FOLDER_NAME</folder>
+	<filename>FILE_NAME</filename>
+	<path>PATH</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>WIDTH</width>
+		<height>HEIGHT</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>LABEL_NAME</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>1</ymin>
+			<xmax>WIDTH</xmax>
+			<ymax>HEIGHT</ymax>
+		</bndbox>
+	</object>
+</annotation>

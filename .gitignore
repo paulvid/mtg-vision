@@ -1,0 +1,7 @@
+cards/card_db.json
+training/*
+DataAugmentationForObjectDetection/
+tensorflow/
+coco/
+cards/*
+pre-trained-model/*

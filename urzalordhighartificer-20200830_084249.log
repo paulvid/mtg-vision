@@ -1,0 +1,54 @@
+Successfully converted xml to csv.
+Successfully converted xml to csv.
+WARNING:tensorflow:From /Users/paulvidal/Documents/vision/mtg-identification/transformImages.py:186: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/test/pickle/d6d5e7ac-b83a-4004-8c39-181a1dbc95cc_2_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image d6d5e7ac-b83a-4004-8c39-181a1dbc95cc.jpg
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/test/pickle/b1c91e2f-6752-4829-9c82-f6b2d108a2d5_3_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image b1c91e2f-6752-4829-9c82-f6b2d108a2d5.jpg
+Processed {line_count} images in CSV file: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/test_labels.csv
+Successfully created the Output CSV Label File:/Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/test_labels_DA.csv
+WARNING:tensorflow:From /Users/paulvidal/Documents/vision/mtg-identification/transformImages.py:186: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/pickle/10971f7b-5c2b-460f-82de-56fcbcb18da6_2_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image 10971f7b-5c2b-460f-82de-56fcbcb18da6.jpg
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/pickle/0d6b7719-d236-45fe-94a4-9cc15828f60a_3_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image 0d6b7719-d236-45fe-94a4-9cc15828f60a.jpg
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/pickle/5b0558b6-77ab-492d-b6ca-4170bde21c63_4_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image 5b0558b6-77ab-492d-b6ca-4170bde21c63.jpg
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/pickle/2ded8722-bcc3-4e83-a342-b6f2fde6e6ac_5_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image 2ded8722-bcc3-4e83-a342-b6f2fde6e6ac.jpg
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/pickle/4a379b54-715a-45eb-a81b-0ca4999974db_6_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image 4a379b54-715a-45eb-a81b-0ca4999974db.jpg
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/pickle/7f5ec992-6482-4578-976d-612fb6aded8e_7_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image 7f5ec992-6482-4578-976d-612fb6aded8e.jpg
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/pickle/628b3309-8286-4682-be29-9a9b13d232b3_8_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image 628b3309-8286-4682-be29-9a9b13d232b3.jpg
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/pickle/9e9da6a7-3285-4d4f-9c76-248ad5efd258_9_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image 9e9da6a7-3285-4d4f-9c76-248ad5efd258.jpg
+Pickle File Created @: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/pickle/9e7fb3c0-5159-4d1f-8490-ce4c9a60f567_10_urzalordhighartificer.pkl
+***Data Augmentation ** 100 Synthetic Images Created For Image 9e7fb3c0-5159-4d1f-8490-ce4c9a60f567.jpg
+Processed {line_count} images in CSV file: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train_labels.csv
+Successfully created the Output CSV Label File:/Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train_labels_DA.csv
+WARNING:tensorflow:From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:142: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+WARNING:tensorflow:From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:129: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+W0830 08:47:24.058554 140734815563200 module_wrapper.py:139] From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:129: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+WARNING:tensorflow:From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:63: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0830 08:47:24.818393 140734815563200 module_wrapper.py:139] From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:63: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+Successfully created the TFRecords: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/train/tfrecord/train.record
+WARNING:tensorflow:From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:142: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+WARNING:tensorflow:From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:129: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+W0830 08:47:33.809535 140735001189824 module_wrapper.py:139] From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:129: The name tf.python_io.TFRecordWriter is deprecated. Please use tf.io.TFRecordWriter instead.
+
+WARNING:tensorflow:From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:63: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0830 08:47:33.924772 140735001189824 module_wrapper.py:139] From /Users/paulvidal/Documents/vision/mtg-identification/generate_tfrecord.py:63: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+Successfully created the TFRecords: /Users/paulvidal/Documents/vision/mtg-identification/cards/urzalordhighartificer/test/tfrecord/test.record
