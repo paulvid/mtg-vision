@@ -54,7 +54,7 @@ echo "⏱  $(date +%H%Mhrs)"
 echo ""
 
 normalized_card_name=$(echo "$card_name" | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')
-log_file="$normalized_card_name-$(date '+%Y%m%d_%H%M%S').log"
+log_file="$BASE_DIR/logs/$normalized_card_name-$(date '+%Y%m%d_%H%M%S').log"
 
 
 # 1. Download DB
@@ -77,14 +77,14 @@ fi
 # 2. Dowloading card
 
 
-nohup $BASE_DIR/download_card_by_name.sh "$card_name" >> $log_file 2>&1 &
-sleep 2
-wait_for_process "$BASE_DIR/download_card_by_name.sh" "card images download"
+# nohup $BASE_DIR/download_card_by_name.sh "$card_name" >> $log_file 2>&1 &
+# sleep 2
+# wait_for_process "$BASE_DIR/download_card_by_name.sh" "card images download"
 
-# 3. Generate xml label
-nohup $BASE_DIR/label_images.sh $BASE_DIR/cards/$normalized_card_name >> $log_file 2>&1 &
-sleep 2
-wait_for_process "$BASE_DIR/label_images.sh" "label generation"
+# # 3. Generate xml label
+# nohup $BASE_DIR/label_images.sh $BASE_DIR/cards/$normalized_card_name >> $log_file 2>&1 &
+# sleep 2
+# wait_for_process "$BASE_DIR/label_images.sh" "label generation"
 
 # 4. Splitting data
 nohup $BASE_DIR/split_card_data.sh $BASE_DIR/cards/$normalized_card_name >> $log_file 2>&1 &

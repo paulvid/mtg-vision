@@ -61,6 +61,18 @@ python3 $BASE_DIR/transformImages.py \
     --outputPath=$BASE_DIR/cards/$normalized_card_name/test_labels_DA.csv \
     --label=$normalized_card_name 
 
+# Adding test set to augemented data
+cp $BASE_DIR/cards/$normalized_card_name/test/*.jpg $BASE_DIR/cards/$normalized_card_name/test/DA/
+while read line; do
+    if [[ "$line" != "filename,width,height,class,xmin,ymin,xmax,ymax" ]]
+    then
+        echo "$line" >> $BASE_DIR/cards/$normalized_card_name/test_labels_DA.csv
+    fi
+  
+done <$BASE_DIR/cards/$normalized_card_name/test_labels.csv
+
+
+
 #Create Training Set
 python3 $BASE_DIR/transformImages.py \
     --inputDir=$BASE_DIR/cards/$normalized_card_name/train/ \
@@ -68,5 +80,12 @@ python3 $BASE_DIR/transformImages.py \
     --imageLabelFile=$BASE_DIR/cards/$normalized_card_name/train_labels.csv \
     --outputPath=$BASE_DIR/cards/$normalized_card_name/train_labels_DA.csv \
     --label=$normalized_card_name 
+cp $BASE_DIR/cards/$normalized_card_name/train/*.jpg $BASE_DIR/cards/$normalized_card_name/train/DA/
+while read line; do
+    if [[ "$line" != "filename,width,height,class,xmin,ymin,xmax,ymax" ]]
+    then
+        echo "$line" >> $BASE_DIR/cards/$normalized_card_name/train_labels_DA.csv
+    fi
+  
+done <$BASE_DIR/cards/$normalized_card_name/train_labels.csv
 
-#Create Test Set

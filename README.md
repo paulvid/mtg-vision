@@ -21,6 +21,18 @@ Its goal is to identify a magic the gathering card based on its picture.
 ```
 ./prepare_card_for_model.sh "[name_of_your_card]"
 ```
+
+## Model training
+```
+./train_card_model.sh "[name_of_your_card]"
+```
+
+## Model packaaging
+```
+./train_card_model.sh [checkpoint_number]
+```
+
+
 # Author & Contributors
 
 **Paul Vidal** - [LinkedIn](https://www.linkedin.com/in/paulvid/)

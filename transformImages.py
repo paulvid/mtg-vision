@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 import csv
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from DataAugmentationForObjectDetection.data_aug.data_aug import *
 from DataAugmentationForObjectDetection.data_aug.bbox_util import *
@@ -147,7 +147,7 @@ def main(_):
                            
               #Create a new syntethic image based on the number of user provided iterations
             for i in range( int(args.numIters) ):
-                        
+               
                 #Create Syntethic Image and Return FileName and Object Boundaries 
                 DAImageName, boundaryBoxes = createSyntheticImage(args.inputDir, image_fileName, pickleFile, i)
                 
