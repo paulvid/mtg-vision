@@ -29,6 +29,7 @@ mkdir $BASE_DIR/training
 
 #Install Tensorflow
 pip3 install tensorflow==1.15
+pip3 install tensorflow-gpu==1.15
 
 #Prerequisite for Tensorflow Models
 pip3 install pillow lxml jupyter matplotlib opencv-python
