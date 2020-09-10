@@ -1,0 +1,1 @@
+2020-09-10 14:53:27.505645: F tensorflow/python/lib/core/bfloat16.cc:675] Check failed: PyBfloat16_Type.tp_base != nullptr 

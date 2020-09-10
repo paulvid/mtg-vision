@@ -10,6 +10,7 @@ Its goal is to identify a magic the gathering card based on its picture.
 ## Pre-Requisites
 * jq
 * python 3.5
+* docker
 
 ## Dependencies
 ```

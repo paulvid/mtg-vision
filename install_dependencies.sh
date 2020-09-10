@@ -87,3 +87,7 @@ export PYTHONPATH=$PYTHONPATH:$BASE_DIR/tensorflow/models/research/object_detect
 
 #Image labelling
 pip3 install labelImg
+
+# getting edge tpu compiler docker
+
+docker build --tag edgetpu_compiler https://github.com/tomassams/docker-edgetpu-compiler.git
