@@ -73,6 +73,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # ---- End of generated content ----
 
 RUN apt-get update -y && apt-get install -y jq
+RUN apt-get update -y && apt-get install -y curl
 ```
 
 
