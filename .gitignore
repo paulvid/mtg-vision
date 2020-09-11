@@ -6,7 +6,6 @@ coco/
 cards/*
 pre-trained-model/*
 .DS_Store
-saved_cards
 logs
 trainedModels/*
 trainedTFLite/*

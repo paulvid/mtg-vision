@@ -1,0 +1,9 @@
+tensorflow==1.15
+tensorflow-gpu==1.15
+pillow==4.1
+lxml
+jupyter
+matplotlib
+opencv-python
+labelImg
+protobuf

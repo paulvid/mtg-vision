@@ -28,11 +28,7 @@ rm -rf $BASE_DIR/training > /dev/null 2>&1
 mkdir $BASE_DIR/training
 
 #Install Tensorflow
-pip3 install tensorflow==1.15
-pip3 install tensorflow-gpu==1.15
-
-#Prerequisite for Tensorflow Models
-pip3 install pillow lxml jupyter matplotlib opencv-python
+pip3 install -r $BASE_DIR/requirements.txt
 
 #Clone Tensorflow Model Git Repo and Build Project
 rm -rf $BASE_DIR/tensorflow > /dev/null 2>&1
@@ -51,7 +47,6 @@ cd $BASE_DIR/pre-trained-model
 wget http://download.tensorflow.org/models/object_detection/ssd_inception_v2_coco_2018_01_28.tar.gz
 tar -xzf ssd_inception_v2_coco_2018_01_28.tar.gz
 
-#Install Tensorflow - Object Detection Tools
 
 #COCO API Install
 cd $BASE_DIR
@@ -86,8 +81,6 @@ export PYTHONPATH=$PYTHONPATH:$BASE_DIR/tensorflow/models/research/
 export PYTHONPATH=$PYTHONPATH:$BASE_DIR/tensorflow/models/research/slim
 export PYTHONPATH=$PYTHONPATH:$BASE_DIR/tensorflow/models/research/object_detection
 
-#Image labelling
-pip3 install labelImg
 
 # getting edge tpu compiler docker
 

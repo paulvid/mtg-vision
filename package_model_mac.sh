@@ -49,6 +49,12 @@ tpu_ip=$2
 export_vars
 
 log_file="$BASE_DIR/logs/$checkpoint-$(date '+%Y%m%d_%H%M%S').log"
+echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+echo "┃ Starting to package model ┃"
+echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
+echo ""
+echo "⏱  $(date +%H%Mhrs)"
+echo ""
 
 
 rm -rf trained-inference-graphs/* > /dev/null 2>&1
@@ -70,3 +76,10 @@ printf "\r${CHECK_MARK} model uploaded to TPU"
 echo ""
  
 echo "${CHECK_MARK} Package completed; run your model: edgetpu_detect_server --model mtg/LogoObjD_edgetpu.tflite --label mtg/label.txt --threshold=0.51"
+
+echo ""
+echo "⏱  $(date +%H%Mhrs)"
+echo ""
+echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+echo "┃ Finished to package model ┃"
+echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
