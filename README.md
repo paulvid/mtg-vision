@@ -1,6 +1,6 @@
-
-
 # MTG Card Identification
+
+![Urza](urza.gif)
 
 This project is based on the work by the Data Jedi Ian Brooks (see [LogoTL repo](https://github.com/BrooksIan/LogoTL)).
 Its goal is to identify a magic the gathering card based on its picture, running on a Coral TPU dev board.
@@ -161,7 +161,8 @@ This step is preparing data for training, including:
 
 **Description:**
 
-This step is transfer learning; it retrains the ssd_inception_v2_coco model with images generated
+This step is transfer learning; it retrains the ssd_inception_v2_coco model with images generated.
+*Note: you can stop the training at any time by ctrl-c; training will restart based on last checkpoint*
 
 ### Training the model
 ```
@@ -170,8 +171,48 @@ This step is transfer learning; it retrains the ssd_inception_v2_coco model with
 
 ### Example execution
 ```
-
-
+INFO:tensorflow:Restoring parameters from training/model.ckpt-35523
+I0911 08:19:35.095611 4504698304 saver.py:1284] Restoring parameters from training/model.ckpt-35523
+WARNING:tensorflow:From /usr/local/lib/python3.5/site-packages/tensorflow_core/python/training/saver.py:1069: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+W0911 08:19:37.186553 4504698304 deprecation.py:323] From /usr/local/lib/python3.5/site-packages/tensorflow_core/python/training/saver.py:1069: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+INFO:tensorflow:Running local_init_op.
+I0911 08:19:37.188764 4504698304 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0911 08:19:37.823971 4504698304 session_manager.py:502] Done running local_init_op.
+INFO:tensorflow:Starting Session.
+I0911 08:19:46.453855 4504698304 learning.py:746] Starting Session.
+INFO:tensorflow:Saving checkpoint to path training/model.ckpt
+I0911 08:19:46.915580 123145594753024 supervisor.py:1117] Saving checkpoint to path training/model.ckpt
+INFO:tensorflow:Starting Queues.
+I0911 08:19:46.916985 4504698304 learning.py:760] Starting Queues.
+INFO:tensorflow:global_step/sec: 0
+I0911 08:19:56.785290 123145589497856 supervisor.py:1099] global_step/sec: 0
+WARNING:tensorflow:From /usr/local/lib/python3.5/site-packages/tensorflow_core/python/training/saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+W0911 08:19:58.277100 123145594753024 deprecation.py:323] From /usr/local/lib/python3.5/site-packages/tensorflow_core/python/training/saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+INFO:tensorflow:Recording summary at step 35524.
+I0911 08:20:00.494594 123145584242688 supervisor.py:1050] Recording summary at step 35524.
+INFO:tensorflow:global step 35525: loss = 1.4406 (15.729 sec/step)
+I0911 08:20:03.369996 4504698304 learning.py:512] global step 35525: loss = 1.4406 (15.729 sec/step)
+INFO:tensorflow:global step 35526: loss = 1.2294 (2.307 sec/step)
+I0911 08:20:06.243526 4504698304 learning.py:512] global step 35526: loss = 1.2294 (2.307 sec/step)
+INFO:tensorflow:global step 35527: loss = 1.5024 (2.261 sec/step)
+I0911 08:20:08.504751 4504698304 learning.py:512] global step 35527: loss = 1.5024 (2.261 sec/step)
+INFO:tensorflow:global step 35528: loss = 1.1537 (2.297 sec/step)
+I0911 08:20:10.802378 4504698304 learning.py:512] global step 35528: loss = 1.1537 (2.297 sec/step)
+INFO:tensorflow:global step 35529: loss = 1.4092 (3.402 sec/step)
+I0911 08:20:14.204577 4504698304 learning.py:512] global step 35529: loss = 1.4092 (3.402 sec/step)
+INFO:tensorflow:global step 35530: loss = 1.0272 (2.508 sec/step)
+I0911 08:20:16.713088 4504698304 learning.py:512] global step 35530: loss = 1.0272 (2.508 sec/step)
+INFO:tensorflow:global step 35531: loss = 0.9695 (2.366 sec/step)
+I0911 08:20:19.079914 4504698304 learning.py:512] global step 35531: loss = 0.9695 (2.366 sec/step)
 ```
 
 
@@ -212,6 +253,10 @@ This step packages the a checkpoint model to TFLite, and compiles it for edge TP
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
+# Debugging
+
+Like mentioned before, this is very much experimental.
+However, I tried to push the logs to the `logs` folder. That should help :) 
 
 # Author & Contributors
 
